@@ -12,7 +12,7 @@
   <description>Gitflow Test</description>
   <groupId>com.test</groupId>
   <artifactId>gitflow-test</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -22,22 +22,22 @@
     DO NOT remove these tags but instead fill them in appropriately as needed, 
     UNLESS the inherited values are valid for your project.
   -->
-  <url/>
-  <inceptionYear/>
-  <organization/>
+  <url />
+  <inceptionYear />
+  <organization />
   <licenses>
-    <license/>
+    <license />
   </licenses>
   <mailingLists>
-    <mailingList/>
+    <mailingList />
   </mailingLists>
   <developers>
-    <developer/>
+    <developer />
   </developers>
   <contributors>
-    <contributor/>
+    <contributor />
   </contributors>
-  <issueManagement/>
+  <issueManagement />
   <scm>
     <connection>scm:git:ssh://git@github.com:mehulparmar/gitflow-test.git</connection>
     <url>https://github.com/mehulparmar/gitflow-test.git</url>
@@ -195,7 +195,7 @@
                     <versionRange>[0.0,)</versionRange>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore/>
+                    <ignore />
                   </action>
                 </pluginExecution>
               </pluginExecutions>
