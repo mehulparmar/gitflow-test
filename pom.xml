@@ -12,7 +12,7 @@
   <description>Gitflow Test</description>
   <groupId>com.test</groupId>
   <artifactId>gitflow-test</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.4</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -22,38 +22,43 @@
     DO NOT remove these tags but instead fill them in appropriately as needed, 
     UNLESS the inherited values are valid for your project.
   -->
-  <url/>
-  <inceptionYear/>
-  <organization/>
+  <url />
+  <inceptionYear />
+  <organization />
   <licenses>
-    <license/>
+    <license />
   </licenses>
   <mailingLists>
-    <mailingList/>
+    <mailingList />
   </mailingLists>
   <developers>
-    <developer/>
+    <developer />
   </developers>
   <contributors>
-    <contributor/>
+    <contributor />
   </contributors>
-  <issueManagement/>
-  <!--
+  <issueManagement />
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <connection>scm:git:ssh://git@github.com:mehulparmar/gitflow-test.git</connection>
+    <url>https://github.com/mehulparmar/gitflow-test.git</url>
+    <developerConnection>scm:git:ssh://git@github.com:mehulparmar/gitflow-test.git</developerConnection>
+    <tag>HEAD</tag>
   </scm>
-  -->
-  <ciManagement/>
+  <ciManagement>
+    <system>Hudson</system>
+    <url>http://cbo-dev1.sentia.nl:8082/</url>
+  </ciManagement>
   <distributionManagement>
     <repository>
-      <id>-</id>
-      <url>-</url>
+      <id>cb-releases</id>
+      <name>Corporate repository</name>
+      <url>http://cbo-dev1.sentia.nl:8081/nexus/content/repositories/releases/</url>
     </repository>
     <snapshotRepository>
-      <id>-</id>
-      <url>-</url>
+      <id>cb-snapshot</id>
+      <uniqueVersion>false</uniqueVersion>
+      <name>Corporate Snapshots</name>
+      <url>http://cbo-dev1.sentia.nl:8081/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
@@ -82,6 +87,20 @@
       <id>hippo</id>
       <name>Hippo maven 2 repository.</name>
       <url>https://maven.onehippo.com/maven2/</url>
+    </repository>
+    <repository>
+      <id>hst-spring-sup-maven-repo</id>
+      <name>HST - Spring Framework Support Maven 2 Repository</name>
+      <url>http://forge.onehippo.org/svn/hst-spring-sup/maven2/</url>
+    </repository>
+    <repository>
+      <id>hippo-maven2-enterprise</id>
+      <name>Hippo Enterprise Maven 2</name>
+      <url>https://maven.onehippo.com/maven2-enterprise</url>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
     </repository>
   </repositories>
 
@@ -176,12 +195,17 @@
                     <versionRange>[0.0,)</versionRange>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore/>
+                    <ignore />
                   </action>
                 </pluginExecution>
               </pluginExecutions>
             </lifecycleMappingMetadata>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>external.atlassian.jgitflow</groupId>
+          <artifactId>jgitflow-maven-plugin</artifactId>
+          <version>1.0-m5.1</version>
         </plugin>
       </plugins>
     </pluginManagement>
