@@ -12,7 +12,7 @@
   <description>Gitflow Test</description>
   <groupId>com.test</groupId>
   <artifactId>gitflow-test</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
   <packaging>pom</packaging>
 
   <!-- 
