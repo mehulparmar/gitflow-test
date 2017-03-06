@@ -12,7 +12,7 @@
   <description>Gitflow Test</description>
   <groupId>com.test</groupId>
   <artifactId>gitflow-test</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.9</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -202,10 +202,27 @@
             </lifecycleMappingMetadata>
           </configuration>
         </plugin>
+
         <plugin>
           <groupId>external.atlassian.jgitflow</groupId>
           <artifactId>jgitflow-maven-plugin</artifactId>
           <version>1.0-m5.1</version>
+          <configuration>
+            <pushFeatures>true</pushFeatures>
+            <pushHotfixes>true</pushHotfixes>
+            <pushReleases>true</pushReleases>
+            <enableSshAgent>true</enableSshAgent>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+            <allowSnapshots>true</allowSnapshots>
+            <flowInitContext>
+              <masterBranchName>master</masterBranchName>
+              <developBranchName>develop</developBranchName>
+              <featureBranchPrefix>feature-</featureBranchPrefix>
+              <releaseBranchPrefix>release-</releaseBranchPrefix>
+              <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+              <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
+            </flowInitContext>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
