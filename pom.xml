@@ -79,7 +79,7 @@
     <content-module-deploy-dir>shared/lib</content-module-deploy-dir>
 
     <hippo.cms.locales>nl,de,fr,es,zh</hippo.cms.locales>
-
+    <project.scm.id>git-flow-test-server</project.scm.id>
   </properties>
 
   <repositories>
