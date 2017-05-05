@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.test</groupId>
     <artifactId>gitflow-test</artifactId>
-    <version>0.0.11</version>
+    <version>0.0.12-SNAPSHOT</version>
   </parent>
   <artifactId>gitflow-test-cms</artifactId>
   <packaging>war</packaging>
