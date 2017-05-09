@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.test</groupId>
     <artifactId>gitflow-test</artifactId>
-    <version>0.0.12</version>
+    <version>0.0.13</version>
   </parent>
 
   <name>Gitflow Test Bootstrap</name>
